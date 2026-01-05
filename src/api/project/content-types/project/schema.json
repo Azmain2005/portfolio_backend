@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "default": "<Code2 className=\"w-6 h-6\" />"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#4A90E2"
+    },
+    "bgGradient": {
+      "type": "string",
+      "default": "from-blue-500/10 to-transparent"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "projects"
+    },
+    "items": {
+      "type": "json"
+    }
+  }
+}
